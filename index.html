@@ -3,18 +3,201 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Armazém Ripamonti</title>
-  <meta name="description" content="Site oficial do Armazém Ripamonti.">
+  <meta name="theme-color" content="#080808">
+  <title>Armazém Ripamonti | Sumaré/SP</title>
+  <meta name="description" content="Armazém Ripamonti em Sumaré/SP. Bebidas geladas, Coca-Cola retornável, gelo, carvão, alimentação, higiene, limpeza e armarinhos. Peça pelo WhatsApp e retire na loja.">
+  <link rel="icon" href="assets/img/logo-armazem-ripamonti-redondo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <main id="app">
-    <section class="project-shell" aria-labelledby="project-title">
-      <p class="eyebrow">Armazém Ripamonti</p>
-      <h1 id="project-title">Projeto em desenvolvimento</h1>
-      <p>Estrutura inicial preparada pela Olegario Tech. Conteúdo comercial aguardando confirmação do cliente.</p>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <div class="intro" id="intro" aria-hidden="true">
+    <canvas id="introParticles"></canvas>
+    <div class="intro-mark">
+      <img src="assets/img/logo-armazem-ripamonti-redondo.png" alt="">
+      <p>Armazém Ripamonti</p>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#inicio" aria-label="Armazém Ripamonti - início">
+      <img src="assets/img/logo-armazem-ripamonti-redondo.png" alt="Armazém Ripamonti">
+      <span>Armazém Ripamonti</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#ofertas">Ofertas</a>
+      <a href="#categorias">Produtos</a>
+      <a href="#historia">Nossa história</a>
+      <a href="#localizacao">Onde estamos</a>
+    </nav>
+    <a class="header-cta" href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Armaz%C3%A9m%20Ripamonti%20e%20quero%20separar%20um%20pedido%20para%20retirada." target="_blank" rel="noopener">Separar pedido</a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <canvas class="particle-canvas" id="heroParticles" aria-hidden="true"></canvas>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="kicker">Residencial Vaughan • Sumaré/SP</p>
+        <img class="hero-logo" src="assets/img/logo-armazem-ripamonti-quadrado-refinado.png" alt="Armazém Ripamonti">
+        <h1>O armazém do bairro.<br><span>Do jeito que tem que ser.</span></h1>
+        <p class="hero-copy">Bebidas geladas, retornáveis, gelo, carvão e aquele pouco de tudo que resolve o dia. Peça pelo WhatsApp e retire na loja.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Armaz%C3%A9m%20Ripamonti%20e%20quero%20separar%20um%20pedido%20para%20retirada." target="_blank" rel="noopener">Separar meu pedido</a>
+          <a class="btn btn-ghost" href="#ofertas">Ver ofertas</a>
+          <a class="text-link" href="#localizacao">Como chegar ↘</a>
+        </div>
+      </div>
+      <div class="hero-card reveal" data-delay="140">
+        <p>Hoje no Armazém</p>
+        <strong>10h às 20h</strong>
+        <span>Terça-feira fechado</span>
+      </div>
+      <a class="scroll-cue" href="#ofertas" aria-label="Rolar para ofertas"><span></span></a>
+    </section>
+
+    <section class="offers section" id="ofertas">
+      <div class="section-heading reveal">
+        <p class="kicker">Oferta boa não espera</p>
+        <h2>Ofertas da semana</h2>
+        <p>Os destaques mudam. A facilidade fica: chama no WhatsApp, confirma e deixa separado para retirar.</p>
+      </div>
+      <div class="offer-grid">
+        <article class="offer-card offer-cold reveal">
+          <div class="offer-media"><img src="assets/img/bebidas-geladas-cervejeiras-01.jpg" alt="Bebidas geladas no Armazém Ripamonti"></div>
+          <div class="offer-body">
+            <span>Bebidas geladas</span>
+            <h3>Gelada de verdade.</h3>
+            <p>Cervejas, refrigerantes, sucos e outras opções prontas para levar.</p>
+            <a href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20quero%20consultar%20as%20bebidas%20geladas%20dispon%C3%ADveis%20hoje%20no%20Armaz%C3%A9m%20Ripamonti." target="_blank" rel="noopener">Consultar no WhatsApp →</a>
+          </div>
+        </article>
+        <article class="offer-card offer-hot reveal" data-delay="90">
+          <div class="offer-media"><img src="assets/img/carvao-em-destaque-01.jpg" alt="Carvão no Armazém Ripamonti"></div>
+          <div class="offer-body">
+            <span>Churrasco</span>
+            <h3>Carvão na mão. Fogo no ponto.</h3>
+            <p>Passou o fim de semana? Resolve aqui e segue pro churrasco.</p>
+            <a href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20quero%20consultar%20o%20carv%C3%A3o%20dispon%C3%ADvel%20hoje%20no%20Armaz%C3%A9m%20Ripamonti." target="_blank" rel="noopener">Consultar carvão →</a>
+          </div>
+        </article>
+        <article class="offer-card offer-red reveal" data-delay="180">
+          <div class="offer-media"><img src="assets/img/coca-cola-retornavel-01.jpg" alt="Coca-Cola retornável no Armazém Ripamonti"></div>
+          <div class="offer-body">
+            <span>Retornável</span>
+            <h3>Economia que volta.</h3>
+            <p>Coca-Cola retornável entre os produtos que fazem parte da rotina da freguesia.</p>
+            <a href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20quero%20consultar%20Coca-Cola%20retorn%C3%A1vel%20no%20Armaz%C3%A9m%20Ripamonti." target="_blank" rel="noopener">Consultar retornáveis →</a>
+          </div>
+        </article>
+      </div>
+      <div class="offers-cta reveal">
+        <p>Quer saber o que está em promoção hoje?</p>
+        <a class="btn btn-primary" href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20as%20ofertas%20de%20hoje%20do%20Armaz%C3%A9m%20Ripamonti." target="_blank" rel="noopener">Ver ofertas de hoje</a>
+      </div>
+    </section>
+
+    <section class="cold-zone section" id="bebidas">
+      <canvas class="particle-canvas" id="coldParticles" aria-hidden="true"></canvas>
+      <div class="split-layout">
+        <div class="split-copy reveal">
+          <p class="kicker">A temperatura certa</p>
+          <h2>Bebida gelada.<br><span>Sem conversa.</span></h2>
+          <p>Abriu a cervejeira, escolheu, levou. Refrigerantes, cervejas, sucos e outras bebidas esperando por você.</p>
+          <a class="btn btn-light" href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20quais%20bebidas%20geladas%20voc%C3%AAs%20t%C3%AAm%20hoje%3F" target="_blank" rel="noopener">Ver o que tem gelado</a>
+        </div>
+        <div class="split-media reveal" data-delay="120">
+          <img src="assets/img/bebidas-geladas-cervejeiras-01.jpg" alt="Cervejeiras com bebidas geladas">
+          <div class="temperature-badge"><strong>GELADA</strong><span>de verdade</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories section" id="categorias">
+      <div class="section-heading reveal">
+        <p class="kicker">Tem um pouco de tudo</p>
+        <h2>Resolve aqui.</h2>
+      </div>
+      <div class="category-grid">
+        <article class="category-card reveal"><span>01</span><h3>Bebidas</h3><p>Cervejas, refrigerantes, sucos e opções geladas.</p></article>
+        <article class="category-card reveal" data-delay="50"><span>02</span><h3>Alimentação</h3><p>Itens para o dia a dia, lanches e conveniência.</p></article>
+        <article class="category-card reveal" data-delay="100"><span>03</span><h3>Higiene & limpeza</h3><p>O básico que falta justo quando você precisa.</p></article>
+        <article class="category-card reveal" data-delay="150"><span>04</span><h3>Armarinhos</h3><p>Utilidades e aquele item que salva a hora.</p></article>
+        <article class="category-card reveal" data-delay="200"><span>05</span><h3>Gelo</h3><p>Para bebida, churrasco e encontro de última hora.</p></article>
+        <article class="category-card reveal" data-delay="250"><span>06</span><h3>Carvão</h3><p>Porque churrasco bom começa antes do fogo.</p></article>
+      </div>
+    </section>
+
+    <section class="duo section">
+      <article class="duo-panel ice-panel reveal">
+        <img src="assets/img/gelo-maxgelo-01.jpg" alt="Gelo em cubos Maxgelo">
+        <div><p class="kicker">Frio</p><h2>Tem gelo.</h2><a href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20quero%20consultar%20gelo%20no%20Armaz%C3%A9m%20Ripamonti." target="_blank" rel="noopener">Separar gelo →</a></div>
+      </article>
+      <article class="duo-panel coal-panel reveal" data-delay="100">
+        <img src="assets/img/carvao-em-destaque-01.jpg" alt="Carvão para churrasco">
+        <div><p class="kicker">Quente</p><h2>Tem carvão.</h2><a href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20quero%20consultar%20carv%C3%A3o%20no%20Armaz%C3%A9m%20Ripamonti." target="_blank" rel="noopener">Separar carvão →</a></div>
+      </article>
+    </section>
+
+    <section class="story section" id="historia">
+      <div class="story-media reveal"><img src="assets/img/ambiente-balcao-conveniencia-01.jpg" alt="Interior do Armazém Ripamonti"></div>
+      <div class="story-copy reveal" data-delay="110">
+        <p class="kicker">Mais que freguesia</p>
+        <blockquote>“Começamos com meia dúzia de produtos. Hoje temos uma freguesia que já virou amizade.”</blockquote>
+        <p>Há mais de um ano, o Armazém Ripamonti cresce do jeito mais antigo — e talvez mais forte — de fazer comércio: atendendo bem, ouvindo quem entra e tendo por perto aquilo que o bairro procura.</p>
+        <div class="story-signature"><strong>Evandro</strong><span>Armazém Ripamonti</span></div>
+      </div>
+    </section>
+
+    <section class="location section" id="localizacao">
+      <div class="location-photo reveal">
+        <picture>
+          <source media="(max-width: 760px)" srcset="assets/img/fachada-armazem-ripamonti-frontal-01.png">
+          <img src="assets/img/fachada-armazem-ripamonti-perspectiva-01.png" alt="Fachada do Armazém Ripamonti em Sumaré">
+        </picture>
+      </div>
+      <div class="location-card reveal" data-delay="120">
+        <img src="assets/img/logo-armazem-ripamonti-redondo.png" alt="" aria-hidden="true">
+        <p class="kicker">Chega aí</p>
+        <h2>Estamos no Vaughan.</h2>
+        <address>Rua Luiz Carlos Lorencatto, 392<br>Residencial Vaughan — Sumaré/SP<br>CEP 13172-731</address>
+        <div class="hours">
+          <span>Terça-feira</span><strong>Fechado</strong>
+          <span>Demais dias</span><strong>10h às 20h</strong>
+        </div>
+        <div class="location-actions">
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Rua%20Luiz%20Carlos%20Lorencatto%20392%20Residencial%20Vaughan%20Sumar%C3%A9%20SP" target="_blank" rel="noopener">Abrir rota</a>
+          <a class="btn btn-ghost" href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Armaz%C3%A9m%20Ripamonti." target="_blank" rel="noopener">Falar com o Armazém</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section">
+      <div class="final-orb" aria-hidden="true"></div>
+      <div class="reveal">
+        <img src="assets/img/logo-armazem-ripamonti-redondo.png" alt="Armazém Ripamonti">
+        <p class="kicker">Prático como tem que ser</p>
+        <h2>Escolheu? A gente separa.<br><span>Você só passa e retira.</span></h2>
+        <a class="btn btn-primary btn-large" href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Armaz%C3%A9m%20Ripamonti%20e%20quero%20separar%20um%20pedido%20para%20retirada." target="_blank" rel="noopener">Separar meu pedido no WhatsApp</a>
+        <small>Não realizamos entregas. Pedidos pelo WhatsApp são para retirada na loja.</small>
+      </div>
     </section>
   </main>
+
+  <footer>
+    <div><strong>Armazém Ripamonti</strong><span>© <span id="year"></span></span></div>
+    <p>Rua Luiz Carlos Lorencatto, 392 • Residencial Vaughan • Sumaré/SP</p>
+    <a href="https://olegariotech.com.br/" target="_blank" rel="noopener">Projeto por Olegario Tech</a>
+  </footer>
+
+  <a class="whatsapp-fab" href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Armaz%C3%A9m%20Ripamonti." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">WA</a>
+  <button class="back-top" id="backTop" type="button" aria-label="Voltar ao topo">↑</button>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>
