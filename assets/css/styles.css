@@ -58,7 +58,7 @@ button{font:inherit}
 .brand span{font-size:.91rem}
 .desktop-nav{margin-left:auto;display:flex;gap:24px;color:#d8d5ce;font-size:.88rem}
 .desktop-nav a{transition:.2s ease}.desktop-nav a:hover{color:var(--yellow)}
-.header-cta{padding:13px 18px;border-radius:999px;background:var(--yellow);color:#080808;font-weight:800;font-size:.85rem}
+.header-cta{padding:13px 18px;border-radius:999px;font-weight:800;font-size:.85rem}
 
 .hero{
   position:relative;min-height:100svh;display:grid;align-items:end;
@@ -79,9 +79,15 @@ h1,h2,h3{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spaci
 .hero h1 span{color:var(--yellow)}
 .hero-copy{max-width:680px;margin:26px 0 0;color:#dedbd4;line-height:1.7;font-size:clamp(1rem,1.4vw,1.18rem)}
 .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:30px}
-.btn{display:inline-flex;justify-content:center;align-items:center;min-height:52px;padding:0 20px;border-radius:14px;font-weight:800;transition:.25s ease;border:1px solid transparent}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:52px;padding:0 20px;border-radius:14px;font-weight:800;transition:.25s ease;border:1px solid transparent}
 .btn:hover{transform:translateY(-2px)}
 .btn-primary{background:var(--yellow);color:#080808;box-shadow:0 14px 35px rgba(255,196,0,.16)}
+.btn-icon{width:21px;height:21px;flex:0 0 21px}
+.btn-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 35px rgba(37,211,102,.18)}
+.btn-whatsapp:hover{background:#20bd5a;box-shadow:0 18px 42px rgba(37,211,102,.24)}
+.btn-maps{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:#111;border:1px solid rgba(255,255,255,.2);box-shadow:0 14px 35px rgba(0,0,0,.18)}
+.btn-maps:hover{background:#f2f2f2}
+.maps-icon{width:22px;height:22px}
 .btn-ghost{border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.04)}
 .btn-light{background:#eefaff;color:#071015}
 .btn-large{min-height:60px;padding:0 26px}
@@ -171,7 +177,8 @@ footer{padding:34px max(24px,calc((100vw - var(--max))/2));border-top:1px solid 
 footer div{display:flex;gap:12px}footer strong{color:#dedbd4}footer p{text-align:center;margin:0}footer>a{text-align:right;color:#a7a39c}
 
 .whatsapp-fab,.back-top{position:fixed;z-index:800;right:20px;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-weight:900}
-.whatsapp-fab{bottom:20px;background:var(--yellow);color:#060606;box-shadow:0 18px 45px rgba(0,0,0,.35)}
+.whatsapp-fab{bottom:20px;background:#25D366;color:#fff;box-shadow:0 18px 45px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.08)}
+.whatsapp-fab .btn-icon{width:27px;height:27px}
 .back-top{bottom:82px;border:1px solid rgba(255,255,255,.14);background:rgba(10,10,10,.84);color:#fff;opacity:0;transform:translateY(10px);pointer-events:none;transition:.25s ease}
 .back-top.visible{opacity:1;transform:none;pointer-events:auto}
 
