@@ -65,7 +65,20 @@ button{font:inherit}
   padding:150px max(24px,calc((100vw - var(--max))/2)) 92px;
   overflow:hidden;
 }
-.hero-bg{position:absolute;inset:0;z-index:0;background:url("../img/hero-fachada-premium-01.jpg") right center/cover no-repeat;transform:scale(1.035)}
+/* Exact official artwork follows the photo crop in a single scene. */
+picture{display:block}
+.offer-media>picture,.story-media>picture{width:100%;height:100%}
+.hero-bg{position:absolute;inset:0;z-index:0;background:#080808;container-type:size;--scene-x:1;transform:scale(1.035)}
+.hero-scene{position:absolute;width:max(100cqw,177.6833cqh);aspect-ratio:1672/941;left:calc((100cqw - max(100cqw,177.6833cqh))*var(--scene-x));top:calc(50% + 42px);transform:translateY(-50%)}
+.scene-photo,.scene-photo img{width:100%;height:auto}
+.scene-logo{position:absolute;pointer-events:none;filter:brightness(.91);transform-origin:center}
+.scene-logo img{width:100%;height:100%;max-width:none;object-fit:fill;clip-path:ellipse(48.7% 48.2% at 49.9% 49.2%)}
+.hero-scene .sign-logo{left:83.7%;top:6.05%;width:9.57%;height:19.1%;transform:rotate(-2deg)}
+.hero-scene .counter-logo{left:69.55%;top:67.45%;width:6.8%;height:12.05%;mix-blend-mode:multiply;transform:skewY(1deg)}
+.facade-scene{position:relative;width:100%;aspect-ratio:4/3}
+.facade-scene>picture:not(.scene-logo),.facade-scene>picture:not(.scene-logo)>img{width:100%;height:auto}
+.facade-scene .sign-logo{left:78.9%;top:12.55%;width:13.32%;height:17.8%}
+.facade-scene .counter-logo{left:60.55%;top:63.4%;width:7.2%;height:9.6%;mix-blend-mode:multiply}
 .hero .particle-canvas{z-index:2}
 .hero-overlay{position:absolute;inset:0;z-index:1;background:
   linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.73) 38%,rgba(0,0,0,.28) 68%,rgba(0,0,0,.38) 100%),
@@ -114,6 +127,7 @@ h1,h2,h3{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spaci
 .offer-card{position:relative;min-height:530px;overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);background:#121212;display:flex;flex-direction:column}
 .offer-media{height:270px;overflow:hidden}.offer-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
 .offer-card:hover .offer-media img{transform:scale(1.045)}
+.offer-hot .offer-media img{object-fit:contain;background:#15110d}
 .offer-body{padding:24px;display:flex;flex-direction:column;flex:1}
 .offer-body>span{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:var(--yellow)}
 .offer-body h3{font-size:2.4rem;line-height:.95;margin:10px 0}
@@ -161,7 +175,7 @@ blockquote{font-family:"Bebas Neue";font-size:clamp(3rem,5.2vw,5.8rem);line-heig
 .location{background:#0a0a0a;display:grid;grid-template-columns:1.3fr .7fr;gap:22px;align-items:stretch}
 .location-photo{min-height:670px;border-radius:32px;overflow:hidden;display:flex;align-items:center;background:#141414;border:1px solid var(--line)}.location-photo img{width:100%;height:auto;object-fit:contain}
 .location-card{border-radius:32px;border:1px solid var(--line);background:linear-gradient(180deg,#141414,#0c0c0c);padding:38px;display:flex;flex-direction:column}
-.location-card>img{width:104px;border-radius:50%;margin-bottom:28px}
+.location-card>picture>img{width:104px;border-radius:50%;margin-bottom:28px}
 .location-card address{font-style:normal;color:#b8b4ad;line-height:1.75;margin:22px 0 30px}
 .hours{display:grid;grid-template-columns:1fr auto;gap:12px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .hours span{color:#8f8b84}.hours strong{color:#fff}
@@ -205,7 +219,10 @@ footer div{display:flex;gap:12px}footer strong{color:#dedbd4}footer p{text-align
   .site-header{min-height:58px;padding:6px 8px;top:8px;width:calc(100% - 16px)}
   .brand img{width:44px;height:44px}.header-cta{padding:11px 13px;font-size:.76rem}
   .hero{padding:120px 18px 70px;min-height:94svh}
-  .hero-bg{background-image:url("../img/hero-fachada-premium-01.jpg");background-position:68% center}
+  /* Full facade and sign remain inside the narrow first viewport. */
+  .hero-scene{width:100cqw;left:0;top:70px;transform:none}
+  .hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#080808 0%,transparent 70%);pointer-events:none}
+  .coal-panel img{height:calc(100% - 24px);top:12px;object-position:62% 42%}
   .hero-overlay{background:linear-gradient(0deg,#080808 0%,rgba(0,0,0,.56) 55%,rgba(0,0,0,.26) 100%)}
   .hero-logo{width:86px;height:86px}.hero h1{font-size:clamp(3rem,14.8vw,5.3rem);line-height:.86}
   .hero-copy{font-size:.96rem}.hero-actions{align-items:stretch}.hero-actions .btn{width:100%}.text-link{width:100%;text-align:center}
