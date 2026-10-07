@@ -2,7 +2,7 @@
 
 Direção aprovada em 07/10/2026. Sete imagens publicitárias criadas com a ferramenta integrada de geração de imagens, a partir das referências do repositório. Os logos oficiais permanecem inalterados. As fachadas aprovadas anteriores foram preservadas. As composições são imagens publicitárias; dados comerciais e proposta de retirada na loja são reais.
 
-Saída final: `assets/img/`, JPG progressivo, qualidade 88. Hero em 1672 × 941; demais imagens em 1448 × 1086. Imagens abaixo da primeira dobra carregam sob demanda.
+Saída final: `assets/img/`, WebP com fallback JPG progressivo. As bases mantidas usam qualidade JPG 88; bebidas e conveniência revistas usam qualidade JPG 90. Hero em 1672 × 941; demais imagens em 1448 × 1086. Imagens abaixo da primeira dobra carregam sob demanda.
 
 ## hero-fachada-premium-01.jpg
 
@@ -74,3 +74,29 @@ Prompt final:
 Use case: ads-marketing. Landscape 4:3 premium believable photograph of organized convenience counter of compact Brazilian neighborhood market, using supplied real photo only as assortment reference. Glass counter, neatly arranged clear candy jars with yellow lids, packaged sweets, chocolate bars and snacks, practical household essentials in background shelving, warm inviting light, black charcoal shelving and discreet yellow accent. Clean tidy premium finish without pretending to be large luxury supermarket. Medium close view, product clarity, natural textures, convenient ready-to-buy feel. No unrelated decorative luxury goods, no people, no store logo or alternative emblem, no lottery posters, no readable prices, no overlay slogans, no watermark.
 ```
 
+
+## Acabamento com fidelidade de marca — 07/10/2026
+
+As bases aprovadas de fachada, MAXGELO, Carvão Orquídea e Coca-Cola retornável foram preservadas. Bebidas e conveniência receberam edições pontuais com a ferramenta integrada de geração/edição de imagens, usando as fotos reais recuperadas do histórico como referência. Nenhuma versão com produtos sem marca integra a entrega.
+
+O logo redondo oficial é aplicado em quatro camadas de imagem no HTML/CSS: placa e balcão no HERO; placa e balcão na fachada frontal. As coordenadas acompanham a escala da foto e o enquadramento responsivo. Os PNGs originais permanecem intactos. Os WebPs dos logos são derivados dos arquivos oficiais, sem redesenho. As fachadas devem ser apresentadas com suas camadas de marca do layout.
+
+Cada fotografia tem WebP no `picture` e JPG como fallback. Os dois PNGs de fachada aprovados anteriormente e os demais arquivos existentes foram preservados. Não há remoção de arquivos nesta rodada.
+
+### Prompts das edições finais
+
+#### 1. bebidas-geladas-premium-01
+
+Use case: precise-object-edit. Image 1 is the approved premium photo to EDIT. Image 2 is the REAL shop beverage refrigerators: authoritative reference for actual product names, colors, label graphics and stocking. Keep image 1's precise 4:3 frame, two refrigerators, shelf organization, bottle/can positions, lighting and commercial premium photography. Edit ONLY inaccurate packaging typography and subtly unnatural condensation. Absolutely keep real brands and recognizable packaging. No anonymous cans, no blank labels, no invented brands. Main labels must read EXACTLY 'SKOL' on gold cans, 'BRAHMA' on red cans, 'IMPÉRIO' on tall white cans, 'Heineken' with correct green/red star identity, 'Coca-Cola' with its familiar original white script on red band, 'Sprite' on green soda, 'CRYSTAL' and 'PETRA' as in the real reference. Budweiser/Original and juice items may remain naturally less prominent/softer in optical focus, preserving their real colors/identity instead of making fake readable letters. Do not try to invent additional fine print. Correct Heineken distortions particularly. The photo must be a coherent stocked real Brazilian neighborhood shop, not a generic catalog. Natural realistic material/ice-cold condensation, lightly reduce excessive AI sharpness. No shop logo or people. Do not redesign/rearrange/reframe. Brand fidelity before cosmetic cleanliness.
+
+#### 2. conveniencia-mercearia-premium-01
+
+Use case: precise-object-edit. Image 1 is the APPROVED premium convenience photo to EDIT, not recreate. Image 2 is the REAL shop photo and authoritative packaging reference. Preserve image 1's precise 4:3 composition, five glass jars/yellow lids, candy contents, black/yellow shelf frames, counter position, viewpoint and warm clean lighting. Correct ONLY obviously invented legible package typography. KEEP actual brands and recognizable packaging; never neutralize the whole store. Make the prominent brown chocolate wrappers faithfully read 'HERSHEY’S' matching the real photo, correct 'Fini' identity on visible candy packaging, and keep recognizable real toiletry/cleaning brands from the reference such as Colgate, Bril and Tixan in their appropriate shelves with faithful colors/name. Packaging further away should be naturally out of optical focus, with real brand colors, not nonsense type and not intentionally blank generic inventory. Do not add made-up slogans, specs, seals or extra brands. Natural retail texture, plausible products and mild optical depth of field. Foreground jars and sweets remain pristine/commercial, accurately shaped. No hands/people, no new layout, no rearrangement, no fabricated logo. Preserve all that is visually strong; this is a faithful branded photo finish.
+
+#### 3. bebidas-geladas-premium-01
+
+Precise-object-edit: fix ONLY the three cans in the RIGHT refrigerator, second shelf, immediately left of the clear glass ICE bottles. They currently have distorted Heineken lettering and one odd blue can. Replace these three specific cans with authentic natural GREEN Heineken cans, faithful green body/red five-point star and legible white brand word 'Heineken' spelled H-e-i-n-e-k-e-n. It is fine that side cans show partial word due curvature, but center can must have accurate complete recognizable brand. Do not erase brand or make generic packaging. Keep their number, positions, scale and geometry. All other cans, bottles, brand marks (including Heineken lower multipack), fridges, shelves, lighting, labels and entire 4:3 composition must remain unchanged. Secondary Budweiser cans on top right shelf may have subtle natural optical focus falloff only to avoid sharp invented fine print, retaining real recognizable Budweiser script and packaging identity. No other alterations.
+
+#### 4. conveniencia-mercearia-premium-01
+
+Precise-object-edit. Make ONE product fidelity correction only. On the foreground FIFTH jar (furthest right of the five yellow-lid jars, filled with chocolate chip cookies), remove the misplaced Fini logo/wrapper printed in front of the cookies and restore the clean transparent jar filled with natural cookies. Fini is a candy brand, do not label cookies as Fini. KEEP the actual Fini branded candy wrappers INSIDE the FOURTH jar and appropriate candy packs in the counter. KEEP all Hershey's chocolate logos, Paloma, Qualité, Sublime, Colgate, Bril, Tixan branding and other truthful product identities unchanged. Do NOT neutralize any other packaging. Preserve every other pixel of the approved composition, shelf arrangement, jar positions, realistic reflections, warm light, 4:3 frame and store character. No other edits, no new objects or typography.
