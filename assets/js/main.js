@@ -6,13 +6,14 @@ const mobile = window.matchMedia('(max-width: 700px)').matches;
 function runIntro(){
   const intro=document.getElementById('intro');
   if(!intro) return;
-  const seen=sessionStorage.getItem('armazem-intro-seen');
+  let seen=false;
+  try{seen=sessionStorage.getItem('armazem-intro-seen')}catch{}
   if(seen || reduced){
     intro.remove();
     return;
   }
   document.body.classList.add('intro-active');
-  sessionStorage.setItem('armazem-intro-seen','1');
+  try{sessionStorage.setItem('armazem-intro-seen','1')}catch{}
   setTimeout(()=>{
     intro.classList.add('is-done');
     document.body.classList.remove('intro-active');
@@ -35,6 +36,7 @@ function particles(canvas,options={}){
     }));
   };
   const draw=()=>{
+    if(!canvas.isConnected) return;
     ctx.clearRect(0,0,w,h);
     for(const p of items){
       p.x+=p.vx;p.y+=p.vy;

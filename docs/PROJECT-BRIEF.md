@@ -75,7 +75,7 @@ O site será uma **vitrine digital**, com destaque para produtos, ofertas, local
 - localização e rota;
 - SEO local para Sumaré e Residencial Vaughan;
 - desempenho e carregamento rápido;
-- uso prioritário de fotografias reais do estabelecimento;
+- identidade e dados reais preservados; imagens publicitárias premium criadas a partir das referências do estabelecimento e dos produtos, conforme aprovação de 07/10/2026;
 - não apresentar delivery, já que o serviço não é oferecido.
 
 ## Direção de conversão
