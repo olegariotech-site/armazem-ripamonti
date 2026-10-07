@@ -429,7 +429,9 @@ h1,h2,h3,blockquote{
   background:#25D366;
   color:#050505;
   border:0;
+  box-shadow:none;
 }
+.btn-whatsapp:hover{box-shadow:none}
 .hero-card{
   right:max(38px,calc((100vw - var(--max))/2));
   bottom:72px;
