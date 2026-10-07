@@ -70,6 +70,11 @@ button{font:inherit}
   linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.73) 38%,rgba(0,0,0,.28) 68%,rgba(0,0,0,.38) 100%),
   linear-gradient(0deg,#080808 0%,transparent 35%);
 }
+.hero-counter-logo-fix{
+  position:absolute;z-index:3;right:24%;bottom:16%;width:clamp(100px,9vw,150px);aspect-ratio:1;object-fit:cover;
+  border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.25);pointer-events:none;
+}
+.hero-copy-short{font-size:clamp(1.06rem,1.55vw,1.28rem);font-weight:650;color:#f2eee6}
 .particle-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .hero-content{position:relative;z-index:4;max-width:720px}
 .kicker{margin:0 0 14px;color:var(--yellow);text-transform:uppercase;letter-spacing:.18em;font-size:.75rem;font-weight:800}
@@ -205,6 +210,7 @@ footer div{display:flex;gap:12px}footer strong{color:#dedbd4}footer p{text-align
   .hero{padding:120px 18px 70px;min-height:94svh}
   .hero-bg{background-image:url("../img/fachada-armazem-ripamonti-frontal-01.png");background-position:center}
   .hero-overlay{background:linear-gradient(0deg,#080808 0%,rgba(0,0,0,.56) 55%,rgba(0,0,0,.26) 100%)}
+  .hero-counter-logo-fix{right:-2%;bottom:27%;width:112px;border-radius:6px}
   .hero-logo{width:86px;height:86px}.hero h1{font-size:clamp(3.5rem,18vw,5.3rem);line-height:.86}
   .hero-copy{font-size:.96rem}.hero-actions{align-items:stretch}.hero-actions .btn{width:100%}.text-link{width:100%;text-align:center}
   .scroll-cue{display:none}
