@@ -979,3 +979,102 @@ main:focus{outline:none}
   height:21px;
   flex:0 0 21px;
 }
+
+/* === OT FOOTER SIGNATURE STANDARD V1 === */
+.site-footer{
+  display:block;
+  padding:0;
+  border-top:1px solid var(--line);
+  background:#060606;
+  color:#817d76;
+  font-size:.78rem;
+}
+.footer-main{
+  display:grid;
+  grid-template-columns:1fr 1.25fr 1fr;
+  align-items:center;
+  gap:24px;
+  padding:28px max(96px,calc((100vw - var(--max))/2));
+}
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.footer-brand strong{color:#dedbd4}
+.footer-address{
+  margin:0;
+  text-align:center;
+  line-height:1.45;
+}
+.footer-links{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  text-align:right;
+}
+.footer-links a,.footer-links button{
+  padding:0;
+  border:0;
+  background:none;
+  color:#b9b5ad;
+  font:inherit;
+  cursor:pointer;
+  text-decoration:none;
+  transition:color .2s ease;
+}
+.footer-links a:hover,.footer-links button:hover,
+.footer-links a:focus-visible,.footer-links button:focus-visible{
+  color:#fff;
+}
+.footer-credit{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:14px max(96px,calc((100vw - var(--max))/2));
+  border-top:1px solid rgba(255,255,255,.08);
+  background:#040404;
+}
+.ot-credit{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  min-height:32px;
+  color:#a7a39c;
+  text-decoration:none;
+  letter-spacing:.01em;
+  transition:color .2s ease;
+}
+.ot-credit strong{
+  color:#f2eee6;
+  font-weight:800;
+}
+.ot-credit-arrow{
+  color:var(--yellow);
+  transform:translateY(-1px);
+}
+.ot-credit:hover,.ot-credit:focus-visible{color:#fff}
+.ot-credit:hover strong,.ot-credit:focus-visible strong{color:var(--yellow)}
+
+@media (max-width:980px){
+  .footer-main{
+    grid-template-columns:1fr;
+    align-items:start;
+    padding:28px 24px;
+  }
+  .footer-address{text-align:left}
+  .footer-links{justify-content:flex-start;text-align:left}
+  .footer-credit{
+    justify-content:flex-start;
+    padding:15px 96px 15px 24px;
+  }
+}
+@media (max-width:760px){
+  .site-footer{padding-bottom:84px}
+  .footer-main{padding:26px 18px 20px}
+  .footer-credit{padding:14px 90px 14px 18px}
+  .ot-credit{justify-content:flex-start;flex-wrap:wrap}
+}
