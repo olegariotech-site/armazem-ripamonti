@@ -843,3 +843,41 @@ main:focus{outline:none}
   .hero-bg{transform:none}
   .offer-card:hover .offer-media img{transform:none}
 }
+
+/* === REAL CARVAO ORQUIDEA PRODUCT PHOTOGRAPHY === */
+/* Real Evandro-supplied product photography replaces the generated charcoal artwork. */
+.offer-hot .offer-media{
+  background:#f7f7f4;
+}
+.offer-hot .offer-media img{
+  object-fit:contain;
+  object-position:center;
+  background:#f7f7f4;
+}
+.coal-panel{
+  background:#f7f7f4;
+}
+.coal-panel img{
+  top:0;
+  bottom:auto;
+  height:72%;
+  object-fit:contain;
+  object-position:center;
+  background:#f7f7f4;
+}
+.coal-panel:after{
+  background:linear-gradient(to bottom,transparent 0 70%,rgba(0,0,0,.20) 70%,#000 78%,#000 100%);
+}
+
+@media (max-width:680px){
+  .coal-panel img{
+    top:0;
+    height:66%;
+    object-fit:contain;
+    object-position:center;
+    background:#f7f7f4;
+  }
+  .coal-panel:after{
+    background:linear-gradient(to bottom,transparent 0 63%,rgba(0,0,0,.18) 63%,#000 72%,#000 100%);
+  }
+}
