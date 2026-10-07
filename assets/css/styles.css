@@ -844,40 +844,59 @@ main:focus{outline:none}
   .offer-card:hover .offer-media img{transform:none}
 }
 
-/* === REAL CARVAO ORQUIDEA PRODUCT PHOTOGRAPHY === */
-/* Real Evandro-supplied product photography replaces the generated charcoal artwork. */
-.offer-hot .offer-media{
+/* Real charcoal photography: intact packaging, separate media and copy. */
+.offer-hot .coal-products{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
   background:#f7f7f4;
+}
+.offer-hot .coal-products>picture{
+  min-width:0;
+  overflow:hidden;
 }
 .offer-hot .offer-media img{
   object-fit:contain;
   object-position:center;
   background:#f7f7f4;
 }
+.offer-hot:hover .offer-media img{transform:none}
 .coal-panel{
+  display:flex;
+  flex-direction:column;
   background:#f7f7f4;
 }
+.coal-panel>picture{
+  position:relative;
+  flex:1;
+  min-height:clamp(280px,25vw,500px);
+}
 .coal-panel img{
-  top:0;
-  bottom:auto;
-  height:72%;
+  inset:0;
+  width:100%;
+  height:100%;
   object-fit:contain;
   object-position:center;
   background:#f7f7f4;
 }
-.coal-panel:after{
-  background:linear-gradient(to bottom,transparent 0 70%,rgba(0,0,0,.20) 70%,#000 78%,#000 100%);
+.coal-panel:after{content:none}
+.coal-panel>.coal-copy{
+  position:static;
+  padding:32px clamp(24px,4vw,64px);
+  background:#080808;
 }
-
-@media (max-width:680px){
-  .coal-panel img{
-    top:0;
-    height:66%;
-    object-fit:contain;
-    object-position:center;
-    background:#f7f7f4;
-  }
-  .coal-panel:after{
-    background:linear-gradient(to bottom,transparent 0 63%,rgba(0,0,0,.18) 63%,#000 72%,#000 100%);
-  }
+.coal-panel h2{
+  font-size:clamp(3.5rem,7vw,7rem);
+  line-height:1;
+}
+.coal-panel a{
+  display:inline-flex;
+  align-items:center;
+  min-height:44px;
+}
+@media (max-width:760px){
+  .coal-panel{min-height:0}
+  .coal-panel>picture{flex:none;min-height:0;aspect-ratio:5/4}
+  .coal-panel>.coal-copy{padding:28px 24px}
+  .coal-panel h2{font-size:clamp(3.5rem,14vw,4.5rem)}
 }
