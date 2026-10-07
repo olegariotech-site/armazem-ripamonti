@@ -93,9 +93,30 @@ function parallax(){
 
 document.getElementById('year').textContent=new Date().getFullYear();
 runIntro();
-particles(document.getElementById('introParticles'),{count:mobile?28:70,color:'255,196,0'});
-particles(document.getElementById('heroParticles'),{count:mobile?15:42,color:'255,196,0'});
-particles(document.getElementById('coldParticles'),{count:mobile?12:32,color:'82,199,255'});
+particles(document.getElementById('introParticles'),{count:mobile?18:42,color:'255,196,0'});
+particles(document.getElementById('heroParticles'),{count:mobile?8:20,color:'255,196,0'});
+particles(document.getElementById('coldParticles'),{count:mobile?5:12,color:'255,255,255'});
 reveals();
 scrollUI();
 parallax();
+
+
+function sceneRail(){
+  const links=[...document.querySelectorAll('.scene-rail a[data-scene]')];
+  if(!links.length) return;
+  const sections=links.map(link=>document.getElementById(link.dataset.scene)).filter(Boolean);
+  const setActive=()=>{
+    const probe=innerHeight*.42;
+    let current=sections[0]?.id;
+    for(const section of sections){
+      const rect=section.getBoundingClientRect();
+      if(rect.top<=probe && rect.bottom>probe){ current=section.id; break; }
+      if(rect.top<=probe) current=section.id;
+    }
+    links.forEach(link=>link.classList.toggle('active',link.dataset.scene===current));
+  };
+  addEventListener('scroll',setActive,{passive:true});
+  addEventListener('resize',setActive,{passive:true});
+  setActive();
+}
+sceneRail();
