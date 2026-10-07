@@ -65,8 +65,9 @@ button{font:inherit}
   padding:150px max(24px,calc((100vw - var(--max))/2)) 92px;
   overflow:hidden;
 }
-.hero-bg{position:absolute;inset:0;background:url("../img/hero-fachada-premium-01.jpg") center/cover no-repeat;transform:scale(1.035)}
-.hero-overlay{position:absolute;inset:0;background:
+.hero-bg{position:absolute;inset:0;z-index:0;background:url("../img/hero-fachada-premium-01.jpg") right center/cover no-repeat;transform:scale(1.035)}
+.hero .particle-canvas{z-index:2}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:
   linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.73) 38%,rgba(0,0,0,.28) 68%,rgba(0,0,0,.38) 100%),
   linear-gradient(0deg,#080808 0%,transparent 35%);
 }
