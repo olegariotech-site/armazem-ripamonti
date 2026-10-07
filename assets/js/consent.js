@@ -5,8 +5,23 @@
 
   const read=()=>{try{return localStorage.getItem(key)}catch{return null}};
   const write=value=>{try{localStorage.setItem(key,value)}catch{}};
-  const open=()=>{banner.hidden=false;requestAnimationFrame(()=>banner.querySelector('[data-privacy-accept]')?.focus())};
-  const close=()=>{banner.hidden=true};
+  let opener=null;
+  const open=button=>{
+    opener=button||null;
+    banner.hidden=false;
+    if(opener) requestAnimationFrame(()=>{
+      if(!banner.hidden) banner.querySelector('[data-privacy-accept]')?.focus({preventScroll:true});
+    });
+  };
+  const close=()=>{
+    const focusInside=banner.contains(document.activeElement);
+    banner.hidden=true;
+    if(focusInside){
+      if(opener?.isConnected) opener.focus({preventScroll:true});
+      else document.activeElement.blur();
+    }
+    opener=null;
+  };
 
   if(!read()) open();
 
@@ -15,10 +30,7 @@
   });
 
   document.querySelectorAll('[data-privacy-open]').forEach(button=>{
-    button.addEventListener('click',()=>{
-      try{localStorage.removeItem(key)}catch{}
-      open();
-    });
+    button.addEventListener('click',()=>open(button));
   });
 
   document.addEventListener('keydown',event=>{

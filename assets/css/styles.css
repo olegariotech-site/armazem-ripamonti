@@ -959,14 +959,15 @@ main:focus{outline:none}
 }
 @media(max-width:760px){
   .footer-links{justify-content:flex-start;text-align:left}
-  .privacy-banner{align-items:stretch;flex-direction:column;gap:14px}
+  .privacy-banner{align-items:stretch;flex-direction:column;gap:14px;bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+  body:has(.back-top.visible) .privacy-banner{bottom:calc(146px + env(safe-area-inset-bottom,0px))}
   .privacy-actions{width:100%;margin-left:0}
   .privacy-actions button{margin-left:auto}
 }
 
 /* === FACEBOOK CTA === */
 .btn-facebook{
-  background:#1877F2;
+  background:#166FE5;
   color:#fff;
   border:0;
 }
