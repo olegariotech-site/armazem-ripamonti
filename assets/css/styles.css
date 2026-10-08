@@ -1079,3 +1079,31 @@ main:focus{outline:none}
   .footer-credit{padding:14px 90px 14px 18px}
   .ot-credit{justify-content:flex-start;flex-wrap:wrap}
 }
+
+/* === CHARCOAL PREMIUM BACKGROUND V1 === */
+.offer-hot .coal-products{
+  background:#0a0806;
+}
+.offer-hot .coal-products>picture{
+  background:#0a0806;
+}
+.offer-hot .offer-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  background:#0a0806;
+}
+.coal-panel{
+  background:#080706;
+}
+.coal-panel>picture{
+  background:#080706;
+}
+.coal-panel img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  background:#080706;
+}
