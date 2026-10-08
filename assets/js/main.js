@@ -8,12 +8,9 @@ let finishIntro = () => {};
 function runIntro(){
   const intro = document.getElementById('intro');
   if(!intro) return;
-  let seen = false;
-  try{ seen = sessionStorage.getItem('armazem-intro-seen'); }catch{}
-  if(seen || motionPreference.matches){ intro.remove(); return; }
+  if(motionPreference.matches){ intro.remove(); return; }
   document.body.classList.add('intro-active');
-  try{ sessionStorage.setItem('armazem-intro-seen', '1'); }catch{}
-  const duration = mobileViewport.matches ? 2800 : 2800;
+  const duration = 2800;
   let removalTimer;
   const closeTimer = setTimeout(() => {
     intro.classList.add('is-done');
