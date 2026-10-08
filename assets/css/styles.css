@@ -1207,3 +1207,19 @@ main:focus{outline:none}
     padding:12px;
   }
 }
+
+/* === CHARCOAL OFFER IMAGE GAP FIX V1 === */
+.offer-hot .coal-products{
+  gap:10px;
+  padding:0;
+  background:var(--ot-marble);
+}
+.offer-hot .coal-products>picture{
+  background:#0a0806;
+  overflow:hidden;
+}
+@media(max-width:760px){
+  .offer-hot .coal-products{
+    gap:8px;
+  }
+}
