@@ -109,6 +109,34 @@ function reveals(){
   });
 }
 
+function imageMotion(){
+  if(!('IntersectionObserver' in window) || !CSS.supports('scale', '1.03')) return;
+  const frames = new Map();
+  const visible = new Set();
+  document.querySelectorAll('[data-photo-motion]').forEach(photo => {
+    const frame = photo.closest('.hero,.offer-media,.split-media,.duo-panel,.story-media,.location-photo');
+    if(!frame) return;
+    photo.classList.add('photo-motion');
+    if(!frames.has(frame)) frames.set(frame, []);
+    frames.get(frame).push(photo);
+  });
+  const sync = frame => {
+    const moving = visible.has(frame) && !document.hidden && !motionPreference.matches;
+    frames.get(frame).forEach(photo => photo.classList.toggle('is-photo-moving', moving));
+  };
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) visible.add(entry.target);
+      else visible.delete(entry.target);
+      sync(entry.target);
+    });
+  }, {threshold: .01});
+  frames.forEach((photos, frame) => observer.observe(frame));
+  const syncAll = () => frames.forEach((photos, frame) => sync(frame));
+  document.addEventListener('visibilitychange', syncAll);
+  motionPreference.addEventListener('change', syncAll);
+}
+
 function scrollUI(){
   const progress = document.querySelector('.scroll-progress span');
   const header = document.querySelector('.site-header');
@@ -168,6 +196,7 @@ if('IntersectionObserver' in window){
   particles(document.getElementById('coldParticles'), {count: 12, mobileCount: 5, color: '255,255,255'});
 }
 reveals();
+imageMotion();
 scrollUI();
 motionPreference.addEventListener('change', event => {
   if(event.matches) finishIntro();

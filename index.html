@@ -31,7 +31,7 @@
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/barlow-condensed-600-latin.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-latin.woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp" href="assets/img/hero-fachada-premium-01.webp?v=20261007-finish-1">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261007-charcoal-bg-1">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261008-photo-motion-1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -93,7 +93,7 @@
     <section class="hero" id="inicio">
       <canvas class="particle-canvas" id="heroParticles" aria-hidden="true"></canvas>
       <div class="hero-bg" aria-hidden="true">
-        <div class="hero-scene">
+        <div class="hero-scene" data-photo-motion="hero">
           <picture class="scene-photo"><source srcset="assets/img/hero-fachada-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/hero-fachada-premium-01.jpg?v=20261007-finish-1" alt="" width="1672" height="941" fetchpriority="high" decoding="async"></picture>
           <picture class="scene-logo sign-logo"><source srcset="assets/img/logo-armazem-ripamonti-redondo.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/logo-armazem-ripamonti-redondo.png" alt="" width="1254" height="1254" decoding="async"></picture>
           <picture class="scene-logo counter-logo"><source srcset="assets/img/logo-armazem-ripamonti-redondo.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/logo-armazem-ripamonti-redondo.png" alt="" width="1254" height="1254" decoding="async"></picture>
@@ -127,7 +127,7 @@
       </div>
       <div class="offer-grid">
         <article class="offer-card offer-cold reveal">
-          <div class="offer-media"><picture><source srcset="assets/img/bebidas-geladas-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/bebidas-geladas-premium-01.jpg?v=20261007-finish-1" alt="Bebidas geladas no Armazém Ripamonti" loading="lazy" decoding="async" width="1402" height="1122"></picture></div>
+          <div class="offer-media"><picture><source srcset="assets/img/bebidas-geladas-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/bebidas-geladas-premium-01.jpg?v=20261007-finish-1" data-photo-motion="cold" alt="Bebidas geladas no Armazém Ripamonti" loading="lazy" decoding="async" width="1402" height="1122"></picture></div>
           <div class="offer-body">
             <span>Bebidas geladas</span>
             <h3>Gelada de verdade.</h3>
@@ -137,8 +137,8 @@
         </article>
         <article class="offer-card offer-hot reveal" data-delay="90">
           <div class="offer-media coal-products">
-            <picture><img src="assets/img/carvao-orquidea-4kg-churrasqueira-premium-v2.png?v=20261007-charcoal-bg-2" alt="Carvão Orquídea 4 kg disponível no Armazém Ripamonti" loading="lazy" decoding="async" width="1024" height="1536"></picture>
-            <picture><img src="assets/img/carvao-orquidea-2kg-churrasqueira-premium-v2.png?v=20261007-charcoal-bg-2" alt="Carvão Orquídea 2 kg disponível no Armazém Ripamonti" loading="lazy" decoding="async" width="1024" height="1536"></picture>
+            <picture><img src="assets/img/carvao-orquidea-4kg-churrasqueira-premium-v2.png?v=20261007-charcoal-bg-2" data-photo-motion="warm" alt="Carvão Orquídea 4 kg disponível no Armazém Ripamonti" loading="lazy" decoding="async" width="1024" height="1536"></picture>
+            <picture><img src="assets/img/carvao-orquidea-2kg-churrasqueira-premium-v2.png?v=20261007-charcoal-bg-2" data-photo-motion="warm" alt="Carvão Orquídea 2 kg disponível no Armazém Ripamonti" loading="lazy" decoding="async" width="1024" height="1536"></picture>
           </div>
           <div class="offer-body">
             <span>Churrasco</span>
@@ -148,7 +148,7 @@
           </div>
         </article>
         <article class="offer-card offer-red reveal" data-delay="180">
-          <div class="offer-media"><picture><source srcset="assets/img/coca-cola-retornavel-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/coca-cola-retornavel-premium-01.jpg?v=20261007-finish-1" alt="Coca-Cola retornável no Armazém Ripamonti" loading="lazy" decoding="async" width="1448" height="1086"></picture></div>
+          <div class="offer-media"><picture><source srcset="assets/img/coca-cola-retornavel-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/coca-cola-retornavel-premium-01.jpg?v=20261007-finish-1" data-photo-motion="editorial" alt="Coca-Cola retornável no Armazém Ripamonti" loading="lazy" decoding="async" width="1448" height="1086"></picture></div>
           <div class="offer-body">
             <span>Retornável</span>
             <h3>Economia que volta.</h3>
@@ -173,7 +173,7 @@
           <a class="btn btn-light" href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20quais%20bebidas%20geladas%20voc%C3%AAs%20t%C3%AAm%20hoje%3F" target="_blank" rel="noopener">Ver o que tem gelado</a>
         </div>
         <div class="split-media reveal" data-delay="120">
-          <picture><source srcset="assets/img/bebidas-geladas-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/bebidas-geladas-premium-01.jpg?v=20261007-finish-1" alt="Cervejeiras com bebidas geladas" loading="lazy" decoding="async" width="1448" height="1086"></picture>
+          <picture><source srcset="assets/img/bebidas-geladas-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/bebidas-geladas-premium-01.jpg?v=20261007-finish-1" data-photo-motion="cold" alt="Cervejeiras com bebidas geladas" loading="lazy" decoding="async" width="1448" height="1086"></picture>
           <div class="temperature-badge"><strong>GELADA</strong><span>de verdade</span></div>
         </div>
       </div>
@@ -196,17 +196,17 @@
 
     <section class="duo section">
       <article class="duo-panel ice-panel reveal">
-        <picture><source srcset="assets/img/gelo-maxgelo-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/gelo-maxgelo-premium-01.jpg?v=20261007-finish-1" alt="Gelo em cubos Maxgelo" loading="lazy" decoding="async" width="1448" height="1086"></picture>
+        <picture><source srcset="assets/img/gelo-maxgelo-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/gelo-maxgelo-premium-01.jpg?v=20261007-finish-1" data-photo-motion="cold" alt="Gelo em cubos Maxgelo" loading="lazy" decoding="async" width="1448" height="1086"></picture>
         <div><p class="kicker">Frio</p><h2>Tem gelo.</h2><a href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20quero%20consultar%20gelo%20no%20Armaz%C3%A9m%20Ripamonti." target="_blank" rel="noopener">Separar gelo →</a></div>
       </article>
       <article class="duo-panel coal-panel reveal" data-delay="100">
-        <picture><img src="assets/img/carvao-orquidea-linha-churrasqueira-premium-v2.png?v=20261007-charcoal-bg-2" alt="Linha de Carvão Orquídea para churrasco disponível no Armazém Ripamonti" loading="lazy" decoding="async" width="1448" height="1086"></picture>
+        <picture><img src="assets/img/carvao-orquidea-linha-churrasqueira-premium-v2.png?v=20261007-charcoal-bg-2" data-photo-motion="warm" alt="Linha de Carvão Orquídea para churrasco disponível no Armazém Ripamonti" loading="lazy" decoding="async" width="1448" height="1086"></picture>
         <div class="coal-copy"><p class="kicker">Quente</p><h2>Tem carvão.</h2><a href="https://wa.me/5519999146221?text=Ol%C3%A1%2C%20quero%20consultar%20carv%C3%A3o%20no%20Armaz%C3%A9m%20Ripamonti." target="_blank" rel="noopener">Separar carvão →</a></div>
       </article>
     </section>
 
     <section class="story section" id="historia">
-      <div class="story-media reveal"><picture><source srcset="assets/img/conveniencia-mercearia-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/conveniencia-mercearia-premium-01.jpg?v=20261007-finish-1" alt="Composição publicitária de balcão com doces, snacks e itens de conveniência" loading="lazy" decoding="async" width="1448" height="1086"></picture></div>
+      <div class="story-media reveal"><picture><source srcset="assets/img/conveniencia-mercearia-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/conveniencia-mercearia-premium-01.jpg?v=20261007-finish-1" data-photo-motion="editorial" alt="Composição publicitária de balcão com doces, snacks e itens de conveniência" loading="lazy" decoding="async" width="1448" height="1086"></picture></div>
       <div class="story-copy reveal" data-delay="110">
         <p class="kicker">Mais que freguesia</p>
         <blockquote>“Começamos com meia dúzia de produtos. Hoje temos uma freguesia que já virou amizade.”</blockquote>
@@ -217,7 +217,7 @@
 
     <section class="location section" id="localizacao">
       <div class="location-photo reveal">
-        <div class="facade-scene">
+        <div class="facade-scene" data-photo-motion="facade">
           <picture><source srcset="assets/img/fachada-frontal-premium-01.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/fachada-frontal-premium-01.jpg?v=20261007-finish-1" alt="Fachada do Armazém Ripamonti em composição publicitária" loading="lazy" decoding="async" width="1448" height="1086"></picture>
           <picture class="scene-logo sign-logo"><source srcset="assets/img/logo-armazem-ripamonti-redondo.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/logo-armazem-ripamonti-redondo.png" alt="" width="1254" height="1254" decoding="async" loading="lazy"></picture>
           <picture class="scene-logo counter-logo"><source srcset="assets/img/logo-armazem-ripamonti-redondo.webp?v=20261007-finish-1" type="image/webp"><img src="assets/img/logo-armazem-ripamonti-redondo.png" alt="" width="1254" height="1254" decoding="async" loading="lazy"></picture>
@@ -285,7 +285,7 @@
     </div>
   </aside>
 
-  <script src="assets/js/main.js?v=20261007-v2-audit-1"></script>
+  <script src="assets/js/main.js?v=20261008-photo-motion-1"></script>
   <script src="assets/js/consent.js?v=20261007-final-qa-1"></script>
 </body>
 </html>

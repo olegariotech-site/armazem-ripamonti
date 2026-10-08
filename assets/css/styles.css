@@ -1107,3 +1107,86 @@ main:focus{outline:none}
   object-position:center;
   background:#080706;
 }
+
+/* Slow photographic motion. Individual transforms preserve the scene alignment
+   and the existing scroll/reveal transforms; interface artwork is not targeted. */
+.photo-motion{
+  --photo-duration:16s;
+  --photo-scale-from:1.03;
+  --photo-scale-to:1.05;
+  --photo-x-from:-.3%;
+  --photo-x-to:.3%;
+  --photo-y-from:0%;
+  --photo-y-to:-.2%;
+  animation:photo-drift var(--photo-duration) ease-in-out infinite alternate;
+  animation-play-state:paused;
+  transform-origin:center;
+  will-change:auto;
+}
+.photo-motion.is-photo-moving{
+  animation-play-state:running;
+  will-change:scale,translate;
+}
+.photo-motion[data-photo-motion="warm"]{
+  --photo-duration:18s;
+  --photo-scale-from:1.025;
+  --photo-scale-to:1.045;
+  --photo-x-from:0%;
+  --photo-x-to:0%;
+  --photo-y-from:.15%;
+  --photo-y-to:-.15%;
+}
+.photo-motion[data-photo-motion="editorial"]{
+  --photo-duration:17s;
+  --photo-x-from:.25%;
+  --photo-x-to:-.25%;
+  --photo-y-to:.15%;
+  animation-delay:-5s;
+}
+.split-media .photo-motion{--photo-duration:18s;animation-delay:-4s}
+.ice-panel .photo-motion{--photo-duration:17s;animation-delay:-7s}
+.coal-panel .photo-motion{--photo-scale-from:1.015;--photo-scale-to:1.03}
+.photo-motion[data-photo-motion="hero"]{
+  --photo-duration:20s;
+  --photo-scale-from:1.015;
+  --photo-scale-to:1.025;
+  --photo-x-from:0%;
+  --photo-x-to:-.15%;
+  --photo-y-to:-.1%;
+  transform-origin:85% 25%;
+}
+.photo-motion[data-photo-motion="facade"]{
+  --photo-duration:19s;
+  --photo-scale-from:1.02;
+  --photo-scale-to:1.035;
+  --photo-x-from:0%;
+  --photo-x-to:-.2%;
+  --photo-y-to:0%;
+  transform-origin:80% 30%;
+}
+.offer-card .photo-motion,.offer-card:hover .photo-motion{
+  transform:none;
+  transition:none;
+}
+.coal-panel>picture{overflow:hidden}
+@media(min-width:761px){
+  .coal-panel>picture{min-height:clamp(280px,29vw,560px)}
+}
+@keyframes photo-drift{
+  from{scale:var(--photo-scale-from);translate:var(--photo-x-from) var(--photo-y-from)}
+  to{scale:var(--photo-scale-to);translate:var(--photo-x-to) var(--photo-y-to)}
+}
+@media(max-width:760px){
+  .photo-motion{--photo-scale-from:1.02;--photo-scale-to:1.035;--photo-x-from:-.15%;--photo-x-to:.15%}
+  .photo-motion[data-photo-motion="warm"]{--photo-scale-from:1.015;--photo-scale-to:1.03}
+  .photo-motion[data-photo-motion="hero"]{--photo-scale-from:1.01;--photo-scale-to:1.02}
+  .photo-motion[data-photo-motion="facade"]{--photo-scale-from:1.015;--photo-scale-to:1.025}
+}
+@media(prefers-reduced-motion:reduce){
+  .photo-motion,.photo-motion.is-photo-moving{
+    animation:none;
+    scale:none;
+    translate:none;
+    will-change:auto;
+  }
+}
