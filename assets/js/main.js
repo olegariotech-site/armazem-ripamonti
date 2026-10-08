@@ -13,7 +13,7 @@ function runIntro(){
   if(seen || motionPreference.matches){ intro.remove(); return; }
   document.body.classList.add('intro-active');
   try{ sessionStorage.setItem('armazem-intro-seen', '1'); }catch{}
-  const duration = mobileViewport.matches ? 1800 : 2800;
+  const duration = mobileViewport.matches ? 2800 : 2800;
   let removalTimer;
   const closeTimer = setTimeout(() => {
     intro.classList.add('is-done');
