@@ -1190,3 +1190,20 @@ main:focus{outline:none}
     will-change:auto;
   }
 }
+
+/* === DUO PANEL SEPARATION FIX V1 === */
+.duo{
+  gap:18px;
+  padding:18px;
+  background:#000;
+}
+.duo-panel{
+  outline:1px solid rgba(255,255,255,.08);
+  outline-offset:0;
+}
+@media(max-width:760px){
+  .duo{
+    gap:12px;
+    padding:12px;
+  }
+}
